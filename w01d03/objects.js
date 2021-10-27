@@ -39,3 +39,7 @@ const num = arr[1 + 1] // 2
 
 console['log']()
 console.log()
+
+const objOne = { one: 'two' };
+const objTwo = { one: 'two' };
+objOne !== objTwo
