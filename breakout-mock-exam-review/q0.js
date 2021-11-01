@@ -16,7 +16,10 @@
  *    9
  */
 const count = function(arr) {
+  return arr.length;
 
+  // const length = arr.length;
+  // return length;
 };
 
 /* ===========================================================================
@@ -32,6 +35,26 @@ const count = function(arr) {
  *    36
  */
 const sum = function(arr) {
+  // create a variable to hold our running total
+  // let total = 0;
+
+  // // loop through the arr
+  // for (const num of arr) {
+  //   // add each element to the running total 
+  //   total += num;
+  //   // total = total + num;
+  // }
+
+  // // return the running total
+  // return total;
+
+  // sum([6,2,3,4,9,6,1,0,5])
+  return arr.reduce((acc, cur) => {
+    return acc + cur;
+  }, 0);
+
+  // arr.reduce((result, number) => (result + number), 0);
+
 
 };
 
@@ -54,6 +77,20 @@ const round = function(number) {
  *    4
  */
 const mean = function(arr) {
+  // if (arr.length === 0) {
+  if (!arr.length) {
+    return null;
+  }
+
+  // avg = total / numElements
+  const total = sum(arr);
+  const numElements = count(arr);
+
+  const avg = total / numElements;
+
+  return round(avg);
+
+  // return round(sum(arr) / count(arr))
 
 };
 

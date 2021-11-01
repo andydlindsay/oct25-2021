@@ -23,12 +23,46 @@
  *    2.67
  */
 
+const q0Funcs = require('./q0');
+const sum = q0Funcs.sum;
+
 // This function is to be used by stdev. Do not alter.
 const round = function(number) {
   return Math.round(number * 100) / 100;
 };
 
 const stdev = function(arr) {
+  // sqrt(avg)
+  const numberOfValues = arr.length;
+  const populationMean = sum(arr) / numberOfValues;
+
+  // const differences = [];
+  // for (const num of arr) {
+  //   const difference = num - populationMean;
+  //   differences.push(difference);
+  // }
+
+  const differences = arr.map((num) => {
+    return num - populationMean;
+  });
+
+  // console.log(differences);
+
+  const squares = differences.map((difference) => {
+    return Math.pow(difference, 2);
+  });
+
+  // console.log(squares);
+
+  const sumSquares = sum(squares);
+
+  // console.log(sumSquares);
+
+  const avg = sumSquares / numberOfValues;
+
+  const answer = Math.sqrt(avg);
+
+  return round(answer);
 
 };
 

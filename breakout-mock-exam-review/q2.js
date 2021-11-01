@@ -23,8 +23,35 @@ const round = function(number) {
  *    4
  */
 
-const median = function(arr) {
+// 6,2,3,4,9,7
+// 2,3,4,6,7,9
+// 0 1 2 3 4 5
 
+// 5 / 2 === 2.5 === 2
+// 6 / 2 === 3 - 1 === 2
+
+const median = function(arr) {
+  // sort the array
+  arr.sort();
+
+  // calculate the middle / right index
+  const middleIndex = Math.floor(arr.length / 2);
+
+  // is the array even-length?
+  if (arr.length % 2 === 0) {
+    // if it is, return the average of the middle two elements
+    const leftIndex = middleIndex - 1;
+
+    const valOne = arr[middleIndex];
+    const valTwo = arr[leftIndex];
+
+    // BEDMAS, PEDMAS
+    const avg = (valOne + valTwo) / 2;
+    return round(avg);
+  }
+    
+  // if not (odd-length), return the middle element  
+  return arr[middleIndex]; 
 };
 
 // Don't change below:
