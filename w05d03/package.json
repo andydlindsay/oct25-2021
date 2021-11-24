@@ -1,0 +1,15 @@
+{
+  "name": "w05d03",
+  "version": "1.0.0",
+  "description": "### To Do - [ ] Create a database - [ ] Perform `BREAD` actions on database via command line app - [ ] Demonstrate an SQL Injection attack - [ ] Serve database content to the browser - [ ] Protecting secrets with Environment Variables",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.7.1"
+  }
+}
