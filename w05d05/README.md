@@ -114,6 +114,9 @@ git merge my-branch
 3 x 30 = 90
 1 x 60 = 60
 
+### Communication
+* hardest part is working with others
+* several times a day
 
 
 
