@@ -1,124 +1,98 @@
 # W05D05 - Mid-term Project Kickoff
 
-### why of midterms
-* practice team work
-* practice for finals
-* to apply/practice everything learned
-* how to collaborate on github
-* putting the pieces together
-
-* something to add to portfolio
-
-### Pick a project
+### Pick a Project
+- Wiki Map
+- Quiz App
+- Story Creator
+- Decision Maker
+- PasswordKeepR
+- Smart TODO List
+- Resource Wall
+- Buy/Sell Listing Website
+- Schoodle
+- Food Pick-up Ordering
 
 ### User Stories
-* As a ______, I can _______, because _________
+- A _user story_ describes how users will interact with your application
+- They have the form: As a ______, I want to ______, because ______.
+- eg. As a _user_, I want to _be able to save posts_, because _I want to review them later_.
+- User stories can also be negated: As a _____, I shouldn't be able to ______, because _____.
+- eg. As a _user_, I shouldn't be able to _edit other users posts_, because _I don't own those posts_.
 
-* As a logged-in user, I can add a contribution to an existing story, because I want to contribute
+### User Scenarios
+- A _user scenario_ is a syntactic alternative to user stories
+- They have the form: Given _____, when ______, then ______.
+- eg. Given _that I am logged in_, when _I click favourite on a post_, then _it is added to my favourites_.
+- You can also chain on an _and_ to user stories/scenarios
+- eg. Given _that I am logged in_, when _I click favourite on a post_, then _it is added to my favourites_ **and** _the save icon will change to indicate success_.
 
-* As a user, I can see a list of maps in my area, because I'm interested in what's going on around me
-
-* As a user, I can favourite a post, because I want to view it later AND the heart icon turns red
-
-### Nouns === resources
-* every noun needs a table
-* ERD
-
-### Planning directory
-* user-stories.md
-* ERDv3.png
+### ERD
+- The user stories provide you with nouns (eg. user, posts, favourites)
+- Use these nouns/entities to build out your database (ie. tables are the nouns from the stories)
 
 ### Routes
-* client a way to update/delete things in the db
+- Once you know the resources that you'll have, write out the routes that you'll need to perform BREAD operations on those resources
+- Remember RESTful conventions (they make it much easier)
 
-### REST REpresentational State Transfer
-
-GET /login
-POST /logout
-
-B GET   /stories/
-R GET   /stories/:id
-E POST  /stories/:id/edit
-A POST  /stories
-D POST  /stories/:id/delete
-
-B GET         /stories
-R GET         /stories/:id
-E PUT/PATCH   /stories/:id
-A POST        /stories
-D DELETE      /stories/:id
-
-routes.md
-
-### MVP
-* Minimum Viable Product
-* minimum amount of features that a user will find useful
-* @KV Minimum Viable Demo (MVD)
-* minimum feature set that we can demo in 5 minutes
-* if you're not going to show it, DON'T BUILD IT
-* Project Killer: wouldn't it be cool if...
+### MVP vs MVD
+- There is a concept in development of an MVP, the Minimum Viable Product
+- An MVP has just enough features to be useful to a user
+- This concept helps streamline the development process and help keep the team on target
+- For mid-terms, we want to focus on the MVD, the Minimum Viable Demo
+- **If you aren't going to demo it, don't build it**
 
 ### Wireframes
-* mockups
-* lowest fidelity possible
+- Draw out the structure of your web pages
+- This will make it much easier to build out these pages later
+- This is also a great opportunity to get input from all of the team members
+- Design matters... however you are a developer, not a designer
+- Get inspiration from websites you visit
 
 ### User Login
-* don't do it
+- Don't do it
+- Seriously, don't do it
+- We know that you know how to register and login users
 
 ```js
+// do this instead
 app.get('/login/:id', (req, res) => {
-  // session cookies
-  req.session.user_id = req.params.id
-
-  // cookie parser
-  res.cookie('user_id', req.params.id);
-
-  // send the user somewhere
+  req.session.user_id = req.params.id;
   res.redirect('/');
 });
 ```
 
-http://localhost:8000/login/2
-http://localhost:8000/login/5
-
 ### Tech Choices
-* Front End: HTML, CSS, JS, jQuery, Bootstrap
-* Back End: Node, Express, Postgres
+- We have made all the tech choices for you
+- Back End: Node and Express
+- Front End: HTML, CSS, JS, jQuery, Bootstrap
 
-### SPA vs Multi-page
-* not mutually exclusive
-* React SPA
-* Rails multi-page app
+### The Mid-term Skeleton
+- Use the provided `node-skeleton` as a template for your project
+- This will get you up and running quickly
 
-### I WILL NOT CODE ON MASTER/MAIN
-* use branches
+### SPA vs Multi-page App
+- These concepts are not mutually exclusive
+- You can choose one or the other or both
 
-* merge locally and then push
-* merge in the cloud and then pull
+### Git
+- Use Git best practices (ask a mentor for clarification if you need it)
+- Use branches
 
-git push origin my-branch
+### DO NOT CODE ON MASTER
+- I repeat, do not code on master
 
-git checkout master
-git merge my-branch
-
-
->>>>>>>>>>>Keep Both, Keep One, Keep the Other
-
->>>>>>>>>>>
-
-### Splitting up the work
-* vertically -> each member of the team is working on a diff piece of the stack
-* horizontally => all members working on the same layer
-* pair programming
-
-3 x 30 = 90
-1 x 60 = 60
+### Splitting up the Work
+- Horizontally - whole team working on front-end or back-end at the same time
+- Vertically - divide the work between front-end and back-end
+- Pair Programming - working together on the same tasks
 
 ### Communication
-* hardest part is working with others
-* several times a day
+- Make sure to communicate with your team members
+- Use Slack, iMessage, Google Hangouts, whatever... just make sure that everyone is on the same page
 
+### Github Projects
+- Github has a built-in project board (similar to a kanban board)
 
-
-
-
+### Deployment
+- Decide if you want/need to deploy your application to the cloud
+- Ask a mentor for assistance/advice if your team decides to deploy
