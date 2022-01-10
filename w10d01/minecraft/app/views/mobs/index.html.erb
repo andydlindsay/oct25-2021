@@ -1,0 +1,8 @@
+<h1>All the mobs!</h1>
+
+<% @mobs.each do |mob| %>
+  <div class="mob">
+    <h2>Name: <%= mob.name %></h2>
+    <%= link_to "View the Drops!", mob_drops_path(mob) %>
+  </div>
+<% end %>
