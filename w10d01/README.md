@@ -6,6 +6,13 @@
 - [ ] Quickly build simple Rails app
 - [ ] Nested Resources
 
+GET /actors
+GET /quotes
+
+GET /actors/2/quotes
+
+GET /videos/5/comments
+
 ### Rails Week Convo
 * convenient
 * rails was fun
