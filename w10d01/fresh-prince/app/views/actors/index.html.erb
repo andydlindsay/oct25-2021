@@ -1,0 +1,9 @@
+<h1>All the actors!!</h1>
+
+
+<% @actors.each do |actor| %>
+  <div class="actor">
+    <h2>Name: <%= actor.name %></h2>
+    <%= link_to 'Check out the quotes!', actor_quotes_path(actor) %>
+  </div>
+<% end %>

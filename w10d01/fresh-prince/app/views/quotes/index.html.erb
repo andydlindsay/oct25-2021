@@ -1,0 +1,11 @@
+<h1>All the quotes for <%= @actor.name %>!</h1>
+
+<%=link_to 'See the actors', actors_path() %>
+
+<!-- 
+<% @quotes.each do |quote| %>
+  <%= render 'quote', quote: quote %>
+<% end %> 
+-->
+
+<%= render @quotes %>
