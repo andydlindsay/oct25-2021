@@ -1,0 +1,12 @@
+"use strict";
+let username = 'Alice';
+username = 'Bob';
+username = 7;
+username = false;
+const onlyNums = [];
+const myNumArr = [];
+// const myNumArr: number[] | string[] = [];
+myNumArr.push([7]);
+myNumArr.push('Bob');
+// myNumArr.push(false);
+const result = myNumArr.pop();
