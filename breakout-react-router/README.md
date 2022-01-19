@@ -9,3 +9,5 @@
 ### Custom Hooks
 * `useParams`: Allows us to access the dynamic parameters in the current url (similar to `req.params` in Express)
 * `useNavigate`: Allows us to programmatically move the user to a different endpoint
+
+* [Upgrading from v5 to v6](https://reactrouter.com/docs/en/v6/upgrading/v5)
